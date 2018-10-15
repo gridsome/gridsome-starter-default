@@ -6,6 +6,6 @@
     "build": "gridsome build"
   },
   "dependencies": {
-    "gridsome": "^0.1.2"
+    "gridsome": "^0.2.0"
   }
 }
