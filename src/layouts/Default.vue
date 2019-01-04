@@ -2,7 +2,7 @@
   <div class="layout">
     <header class="header">
       <strong>
-        <g-link :to="{ name: 'home' }">Gridsome</g-link>
+        <g-link :to="{ name: 'home' }">{{ $static.metaData.siteName }}</g-link>
       </strong>
       <nav class="nav">
         <g-link class="nav__link" :to="{ name: 'home' }">Home</g-link>
@@ -13,6 +13,14 @@
   </div>
 </template>
 
+<static-query>
+query {
+  metaData {
+    siteName
+  }
+}
+</static-query>
+
 <style>
 body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -22,7 +30,7 @@ body {
 }
 
 .layout {
-  max-width: 600px;
+  max-width: 760px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
